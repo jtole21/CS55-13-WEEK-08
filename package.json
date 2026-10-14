@@ -1,0 +1,66 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "npm run lint:next && npm:lint:prettier",
+    "lint:next": "next lint",
+    "lint:prettier": "prettier --check --ignore-path .gitignore .",
+    "lint:fix": "npm run lint:next -- --fix && npm run lint:prettier -- --write"
+  },
+  "dependencies": {
+    "@genkit-ai/googleai": "^1.28.0",
+    "cookies-next": "^5.1.0",
+    "firebase": "^12.19.0",
+    "firebase-tools": "^15.32.1",
+    "genkit": "^1.42.0",
+    "next": "^16.4.0",
+    "react": "19.2.1",
+    "react-dom": "19.2.1",
+    "server-only": "^0.0.1"
+  },
+  "browser": {
+    "fs": false,
+    "os": false,
+    "path": false,
+    "child_process": false,
+    "net": false,
+    "tls": false
+  },
+  "devDependencies": {
+    "@next/eslint-plugin-next": "^14.2.35",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.35",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.5.3"
+  },
+  "overrides": {
+    "basic-ftp": "6.2.2",
+    "chokidar": "4.0.3",
+    "@grpc/grpc-js": "1.14.5",
+    "@next/eslint-plugin-next": {
+      "glob": "10.5.0"
+    },
+    "@opentelemetry/auto-instrumentations-node": "0.81.0",
+    "uuid": "11.1.1",
+    "@opentelemetry/core": "2.12.0",
+    "@opentelemetry/exporter-trace-otlp-grpc": "0.223.0",
+    "@opentelemetry/exporter-trace-otlp-http": "0.223.0",
+    "@opentelemetry/exporter-trace-otlp-proto": "0.223.0",
+    "@opentelemetry/exporter-zipkin": "2.12.0",
+    "@opentelemetry/otlp-exporter-base": "0.223.0",
+    "@opentelemetry/otlp-grpc-exporter-base": "0.223.0",
+    "@opentelemetry/otlp-transformer": "0.223.0",
+    "@opentelemetry/propagator-b3": "2.12.0",
+    "@opentelemetry/propagator-jaeger": "2.12.0",
+    "@opentelemetry/resources": "2.12.0",
+    "@opentelemetry/sdk-logs": "0.223.0",
+    "@opentelemetry/sdk-metrics": "2.12.0",
+    "@opentelemetry/sdk-node": "0.223.0",
+    "@opentelemetry/sdk-trace-base": "2.12.0",
+    "@opentelemetry/sdk-trace-node": "2.12.0"
+  }
+}

@@ -1,0 +1,8 @@
+env:
+  # Create this secret with: firebase apphosting:secrets:set gemini-api-key
+  # App Hosting exposes the secret to the server as GEMINI_API_KEY.
+  - variable: GEMINI_API_KEY
+    secret: gemini-api-key
+runConfig:
+  minInstances: 0
+  maxInstances: 2

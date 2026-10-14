@@ -1,0 +1,10 @@
+.next/
+.firebase/
+node_modules/
+.env
+.env.local
+.env*.local
+.firebaserc
+.DS_Store
+firestore-debug.log
+CS55-13-WEEK-07/
