@@ -1,8 +1,11 @@
-env:
-  # Create this secret with: firebase apphosting:secrets:set gemini-api-key
-  # App Hosting exposes the secret to the server as GEMINI_API_KEY.
-  - variable: GEMINI_API_KEY
-    secret: gemini-api-key
+# Review summaries need a Gemini key in Secret Manager.
+# A rollout fails if this block names a secret that does not exist yet.
+# After creating the key, uncomment the env block and roll out again:
+#   firebase apphosting:secrets:set gemini-api-key
+#   firebase apphosting:secrets:grantaccess gemini-api-key --backend css551307
+# env:
+#   - variable: GEMINI_API_KEY
+#     secret: gemini-api-key
 runConfig:
   minInstances: 0
   maxInstances: 2
